@@ -21,10 +21,118 @@ body{
     font-size: 1.4rem;
     line-height: 1.5;
     font-family: var(--fuentePrincipal);
+    background-color: var(--primario);
 
 }
 h1{
     font-size: 2.5rem;
+    color:var(--blanco);
     text-align: center;
-    background-color: var(--primario);
+    background-color: var(--primarioOscuro);
+}
+h2{
+    font-size: 2rem;
+    text-align: center;
+}
+h3{
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding:.5rem;
+}
+p{
+    font-size: 1rem;
+    text-align: center;
+}
+img{
+    cursor:pointer;
+}
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--blanco);
+    font-weight: bold;
+    background-color: var(--grisClaro);
+    border-radius: .5rem;
+    margin-top: 1rem;
+    padding: .5rem;
+}
+a:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color:var(--negro)
+}
+.cont-links{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+.m-2{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 25rem 1fr;
+    grid-template-areas:
+        "header header"
+        "nav principal";
+    min-height: 100vh;
+    gap: 1rem;
+
+}
+
+header {
+    grid-area: header;
+}
+
+nav#panel-izquierda {
+    grid-area: nav;
+}
+
+#principal {
+    grid-area: principal;
+}
+
+#series {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    padding:1rem;
+}
+
+@media (max-width: 899px) {
+    #series {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 549px) {
+    #series {
+        grid-template-columns: 1fr;
+    }
+}
+@media (min-width: 768px) {
+    .boton{
+        font-size: 1.5rem;
+        width:30%;
+
+    }
+}
+.boton{
+    background-color: var(--primarioOscuro);
+    color: var(--blanco);
+    padding:1rem 3rem; 
+    margin-top: 1.2rem;
+    font-size: 1rem;
+    text-decoration: none; /*saca la linea de abajo de un enlace por ej*/
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem; /*redondea bordes de el boton por ej*/
+    width: 60%; /*para que el boton en un celular por ej, llegue a las esquinas*/
+    text-align: center; /*centro texto*/
+    border:none;
+}
+.boton:hover{
+    cursor:pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Difuminado negro */
+}
+
+.footer{
+    text-align: center;
 }
