@@ -67,7 +67,7 @@ class Control {
                 this.CargaInicial();
             }
         });
-        
+
     }
 }
 
